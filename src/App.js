@@ -98,7 +98,7 @@ const App = () => {
             <th>Syscode</th>
             <th>Zone</th>
             <th>XG Database</th>
-            <th>TIME ZONE</th>
+            <th>Time Zone</th>
             <th>Retail Zones Per IC</th>
           </tr>
           {final_arr.map((f, i) => {
