@@ -54,6 +54,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1>Search Syscodes - <span>Effectv</span></h1>
       <div className="inp">
         <div className="input-class">
           <div className="inp_headen">
@@ -86,9 +87,9 @@ const App = () => {
               className={sys_err ? "err" : ""}
             />
           </div>
+          <button className="search-button" onClick={display_table}>Search</button>
+        <button className="delete-button" onClick={clear_table}>Clear</button>
         </div>
-        <button onClick={display_table}>submit</button>
-        <button onClick={clear_table}>clear</button>
       </div>
       <div>
         <table>
@@ -116,6 +117,7 @@ const App = () => {
           })}
         </table>
       </div>
+      <div className="comcast-strip"></div>
     </div>
   );
 };
