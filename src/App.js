@@ -54,7 +54,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Search Syscodes - <span>Effectv</span></h1>
+      <h1><span>Syscodes Search</span> - Effectv</h1>
       <div className="inp">
         <div className="input-class">
           <div className="inp_headen">
