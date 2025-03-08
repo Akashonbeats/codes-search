@@ -29,21 +29,21 @@ const App = () => {
       );
       let o = [...obj, ...final_arr];
       setFinal_array(o);
-      if (obj) {
+      if (obj.length > 0) {
         setHead_err(false);
-      }
-      if (obj == "") {
+      } else {
         setHead_err(true);
+        document.getElementById("headen").focus();
       }
     }
     if (inp_sys) {
       let objs = Sys_data.filter((fil) => fil.Syscode == inp_sys);
       setFinal_array([...objs, ...final_arr]);
-      if (objs) {
+      if (objs.length > 0) {
         setSys_err(false);
-      }
-      if (objs == "") {
+      } else {
         setSys_err(true);
+        document.getElementById("sys").focus();
       }
     }
   };
@@ -54,7 +54,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1><span>Syscodes Search</span> - Effectv</h1>
+      <h1>
+        <span>Syscodes Search</span> - Effectv
+      </h1>
       <div className="inp">
         <div className="input-class">
           <div className="inp_headen">
@@ -87,21 +89,27 @@ const App = () => {
               className={sys_err ? "err" : ""}
             />
           </div>
-          <button className="search-button" onClick={display_table}>Search</button>
-        <button className="delete-button" onClick={clear_table}>Clear</button>
+          <button className="search-button" onClick={display_table}>
+            Search
+          </button>
+          <button className="delete-button" onClick={clear_table}>
+            Clear
+          </button>
         </div>
       </div>
       <div>
         <table>
-          <tr>
-            <th>Market Abbreviation</th>
-            <th>Headend</th>
-            <th>Syscode</th>
-            <th>Zone</th>
-            <th>XG Database</th>
-            <th>Time Zone</th>
-            <th>Retail Zones Per IC</th>
-          </tr>
+          {final_arr.length > 0 && (
+            <tr>
+              <th>Market Abbreviation</th>
+              <th>Headend</th>
+              <th>Syscode</th>
+              <th>Zone</th>
+              <th>XG Database</th>
+              <th>Time Zone</th>
+              <th>Retail Zones Per IC</th>
+            </tr>
+          )}
           {final_arr.map((f, i) => {
             return (
               <tr key={i}>
