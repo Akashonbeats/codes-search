@@ -27,7 +27,7 @@ const App = () => {
       let obj = Sys_data.filter(
         (fil) => fil.Headend == inp_headen.toUpperCase()
       );
-      let o = [...obj, ...final_arr];
+      let o = [...final_arr, ...obj];
       setFinal_array(o);
       if (obj.length > 0) {
         setHead_err(false);
@@ -38,7 +38,7 @@ const App = () => {
     }
     if (inp_sys) {
       let objs = Sys_data.filter((fil) => fil.Syscode == inp_sys);
-      setFinal_array([...objs, ...final_arr]);
+      setFinal_array([...final_arr, ...objs]);
       if (objs.length > 0) {
         setSys_err(false);
       } else {
