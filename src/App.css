@@ -91,7 +91,7 @@ table tr:last-child td:last-child {
   border-bottom-right-radius: 15px;
 }
 td {
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 0.7s ease-in-out;
 }
 td,
 th {
@@ -104,7 +104,7 @@ th {
 tr:nth-child(1) th {
   background-color: #1b1b1b;
   padding: 17px;
-  animation: appear 0.5s ease-in-out;
+  animation: appear 0.25s ease-in-out;
 }
 
 .input-class {
